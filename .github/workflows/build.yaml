@@ -6,7 +6,7 @@ on:
       - '**'
       - '!master'
 
-# triggerBuildPipeline = 0
+# triggerBuildPipeline = 1
 
 jobs:
   build:
