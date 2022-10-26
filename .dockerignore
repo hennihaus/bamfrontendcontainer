@@ -1,0 +1,13 @@
+.github
+.gradle
+.idea
+build
+gradle
+out
+.gitignore
+.git
+bamfrontendserver.iml
+gradlew
+gradlew.bat
+License
+vue-app

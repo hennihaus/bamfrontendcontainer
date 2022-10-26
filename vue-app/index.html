@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Vue</title>
+    <meta name="description" content="Vue">
+    <meta name="author" content="Jan-Hendrik Hausner">
+
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="first-app">
+        <p>{{ info }}</p>
+    </div>
+    <script>
+        const FirstVueApp = {
+            data() {
+                return {
+                    info: 'Hello Vue!',
+                };
+            },
+        };
+
+        Vue.createApp(FirstVueApp).mount("#first-app");
+    </script>
+</body>
+</html>
