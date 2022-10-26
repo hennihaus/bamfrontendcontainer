@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+    <ManuallySuppressedIssues>
+        <!-- <ID>TooManyFunctions:GithubMapperService.kt$GithubMapperService</ID> -->
+    </ManuallySuppressedIssues>
+    <!-- Current Issues should be empty -->
+    <CurrentIssues/>
+</SmellBaseline>
