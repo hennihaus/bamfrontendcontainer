@@ -1,6 +1,6 @@
 package de.hennihaus
 
-import de.hennihaus.configuration.Configuration.SINGLE_PAGE_APPLICATION_PATH
+import de.hennihaus.configurations.Configuration.SINGLE_PAGE_PATH
 import io.kotest.assertions.ktor.client.shouldHaveStatus
 import io.kotest.matchers.shouldBe
 import io.ktor.client.request.get
@@ -22,7 +22,7 @@ class ApplicationTest {
         val response: HttpResponse = client.get(urlString = "")
 
         response shouldHaveStatus HttpStatusCode.OK
-        response.bodyAsText() shouldBe File(SINGLE_PAGE_APPLICATION_PATH).readText()
+        response.bodyAsText() shouldBe File("$SINGLE_PAGE_PATH/$SINGLE_PAGE_ROOT_FILE").readText()
     }
 
     @Test
@@ -34,6 +34,10 @@ class ApplicationTest {
         val response: HttpResponse = client.get(urlString = "/")
 
         response shouldHaveStatus HttpStatusCode.OK
-        response.bodyAsText() shouldBe File(SINGLE_PAGE_APPLICATION_PATH).readText()
+        response.bodyAsText() shouldBe File("$SINGLE_PAGE_PATH/$SINGLE_PAGE_ROOT_FILE").readText()
+    }
+
+    companion object {
+        const val SINGLE_PAGE_ROOT_FILE = "index.html"
     }
 }
