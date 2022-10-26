@@ -1,5 +1,6 @@
 package de.hennihaus
 
+import de.hennihaus.configuration.Configuration.SINGLE_PAGE_APPLICATION_PATH
 import io.kotest.assertions.ktor.client.shouldHaveStatus
 import io.kotest.matchers.shouldBe
 import io.ktor.client.request.get
@@ -34,9 +35,5 @@ class ApplicationTest {
 
         response shouldHaveStatus HttpStatusCode.OK
         response.bodyAsText() shouldBe File(SINGLE_PAGE_APPLICATION_PATH).readText()
-    }
-
-    companion object {
-        private const val SINGLE_PAGE_APPLICATION_PATH = "vue-app/index.html"
     }
 }

@@ -1,5 +1,6 @@
 package de.hennihaus.plugins
 
+import de.hennihaus.configuration.Configuration.SINGLE_PAGE_APPLICATION_PATH
 import io.ktor.server.application.Application
 import io.ktor.server.application.install
 import io.ktor.server.http.content.singlePageApplication
@@ -11,7 +12,7 @@ fun Application.configureRouting() {
     install(plugin = IgnoreTrailingSlash)
     install(plugin = Routing) {
         singlePageApplication {
-            vue(filesPath = "vue-app")
+            vue(filesPath = SINGLE_PAGE_APPLICATION_PATH)
         }
     }
 }
