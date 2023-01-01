@@ -24,7 +24,7 @@ jobs:
         run: ./gradlew build --no-daemon
 
       - name: Bump version and push tag
-        uses: anothrNick/github-tag-action@1.40.0
+        uses: anothrNick/github-tag-action@1.55.0
         id: tag-version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -33,7 +33,7 @@ jobs:
           PRERELEASE_SUFFIX: beta
 
       - name: Docker Login
-        uses: docker/login-action@v2.0.0
+        uses: docker/login-action@v2.1.0
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASS }}
